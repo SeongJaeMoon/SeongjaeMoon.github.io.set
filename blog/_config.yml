@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Moon's Programming World :)
+title: Moon's World :)
 subtitle: Hello World
 description: Java Kotlin Android Firebase C++ Realm JavaScript SQLite
 author: Seongjae Moon
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -77,5 +77,6 @@ theme: hueman
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:git
-  repo:https://github.com/SeongJaeMoon/SeongjaeMoon.github.io.git
+  type: git
+  repo: https://github.com/SeongJaeMoon/SeongjaeMoon.github.io.git
+  branch: master
