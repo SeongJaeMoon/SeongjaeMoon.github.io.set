@@ -78,5 +78,5 @@ theme: hueman
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/SeongJaeMoon/SeongjaeMoon.github.io.git
+  repo: git@github.com:SeongJaeMoon/SeongjaeMoon.github.io.git
   branch: master
