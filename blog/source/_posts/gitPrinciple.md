@@ -72,14 +72,14 @@ ssh-keygen -t rsa -C "your_email@example.com"
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 ```
-키를 만들어으니 에이전트에 추가해야한다. 자세한 설명은 [여기를 참고](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+키를 만들었으니 에이전트에 추가해야한다. 자세한 설명은 [여기를 참고](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 ```bash
 eval “$(ssh-agent -s)”
 ssh-add ~/.ssh/id_rsa
 ```
 아래 명령어를 실행하여 키를 클립보드에 저장한다. ctrl + ins를 활용해서 복사해도 된다.
 ```bash
-bcopy < ~/.ssh//id_rsa.pub
+clip < ~/.ssh//id_rsa.pub
 ```
 위 단계까지 정상적으로 끝났다면, 자신의 github 홈페이지에 접속하여, Settings > SSH and GPG keys > New SSH key를 선택한다.
 ![새로운 SSH키 생성2](/uploads/githubSetting.jpg)  
@@ -150,10 +150,9 @@ choose your files를 선택하여 직접 파일을 업로드하거나 폴더를 
 단, 한번에 올리는 폴더 갯 수가 100개의 제한이 있다. 파일을 업로드한 후 Commit changes버튼을 클릭하고 잠시 기다리면 커밋이 완료된다.
 
 ![저장소 업로드 마침](/uploads/gitUploadFinally.jpg)
-아주 잘 되는 것을 확인할 수 있다 얄루!:)
+아주 잘 되는 것을 확인할 수 있다. 얄루!:)
 
-
-github와 git bash 사용법에 대해 간단하게? 알아보았다. 단순한 작업임에도 명령어가 너무 많다... 필요할 때 마다 스택오버플로우나 github document를 읽어가면서 실행해야 함을 알 수 있다. 다음은 Git의 가장 큰 매력인 branch, pull, merge 및 기타 기능들에 대해 살펴 보는걸로~
+이로써, github와 git bash 사용법에 대해 간단하게? 알아보았다. 단순한 작업임에도 명령어가 너무 많다... 저장소 생성 -> add -> commit -> push를 기본으로 하는 것을 알 수 있다. 하지만 역시나 언제나 삼천세계에 빠질 우려가 있기 때문에 필요할 때 마다 스택오버플로우나 github document를 읽어가면서 실행해야 함을 알 수 있다. 다음은 Git의 가장 큰 매력인 branch, pull, merge 및 기타 기능들에 대해 심도있게 살펴 보는걸로~
   
 * 오타나 잘못된 부분을 지적 해주시면 감사히 생각하고 수정토록 하겠습니다 :)
 [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/intro/intro1_1.html)

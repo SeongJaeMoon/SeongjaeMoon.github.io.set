@@ -3,11 +3,15 @@ layout: '[post]'
 title: 행복은 과학이다.(손현정 저) 중에서
 date: 2017-12-04 14:00:00
 tag:
+- 행복은 과학이다.
 - 명언
 - 좋은책
 - 좋은글
 categories: Clutter
+thumbnail: /uploads/book0.jpg
 ---
+
+![행복은 과학이다](/uploads/book0.jpg)
 
 좋은 글 남기기 첫 번째.
 
