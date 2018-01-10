@@ -81,6 +81,5 @@ git pull --rebase origin master //git pull 명령으로 중앙 저장소의 변�
 여기서 살펴본 내용은 지극히 작업이 정상적으로 이루어졌을 경우를 대상으로 하고 있다. 실제 협업을 하다보면 수 십~수 백 개의 커밋이 오갈 수 있고, 커밋을 이전 상태로 돌리거나 병합 충돌 등의 경우를 해결해야 할 경우가 분명.. 발생할 것이다. 이는 구글링으로 해결 해보는걸로~
 
 * 오타나 잘못된 부분을 지적 해주시면 감사히 생각하고 수정토록 하겠습니다 :)
-
 [Git Fork에서 Pull Request까지](https://medium.com/axisj/github-fork-%EC%97%90%EC%84%9C-pull-request-%EA%B9%8C%EC%A7%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-merge-a22bdd097283)
 [Git의 모든것](http://goodtogreate.tistory.com/entry/Git%EC%9D%98-%EB%AA%A8%EB%93%A0%EA%B2%831-%EA%B8%B0%EC%B4%88-%EA%B0%9C%EB%85%90?category=440231)
