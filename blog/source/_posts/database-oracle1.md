@@ -8,7 +8,7 @@ tag:
 - 함수
 - Database
 - Query
-thumbnail: /uploads/.jpg
+thumbnail: /uploads/Oracle.jpg
 ---
 
 DB관리는 소스코드를 직접 작성하는 것과 더불어 굉장히 중요한 작업이다. DB와 관련된 내용을 정리하자면 끝이 없겠지만,  그 중요성만큼은 누구도 부정하지 않을 것이다. 
