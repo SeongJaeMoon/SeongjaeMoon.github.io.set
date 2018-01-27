@@ -25,9 +25,8 @@ ROLLUP(),CUBE(),GROUPING SETS(),LISTAGG(),PIVOT(),LAG()
 --hr.employees 테이블에서 부서번호(department_id)별로 인원수 출력
 SELECT NVL(department_id,-1) department_id,COUNT(*)
 FROM hr.employees
-GROUP BY NVL(department_id,-1)
+GROUP BY ROULLUP(NVL(department_id,-1))
 ORDER BY department_id;
-
 ```
 ### CUBE() 함수
 기준별(GROUP BY) 소계(COUNT, SUM)및 전체합계를 요약해서 보여주는 함수.
@@ -224,7 +223,7 @@ FROM table_list 별칭;
 
 간단하게? 오라클 내장 분석 함수 및 서브쿼리에 형식에 대해 정리해보았다. 조인(Join)만으로도 해결 가능한 경우가 많다고 하나, 분명 조인만으로는 특정 테이블의 값을 가져오는게 어려울 수 있다. 내장 함수와 적절한 서브쿼리를 잘 콜라보해서 값을 뽑아올 수 있도록, 쿼리문 날리는 연습을 많이 해야겠다. (**역시 연습만이 살 길 헿!**) 
 
-다음 포스팅에선 RDB의 꽃 중 꽃인 '조인'과 테이블 '스키마'(Scheme)에 대해 알아보는 걸로~
+[다음](https://seongjaemoon.github.io/2017/01/14/database-oracle3/) 포스팅에선 RDB의 꽃 중 꽃인 '조인'과 테이블 '스키마'(Scheme)에 대해 알아보는 걸로~
 
 * 오타나 잘못된 부분을 지적 해주시면 감사히 생각하고 수정토록 하겠습니다 :)
 서진수, 김도균 지음 다양한 예제로 쉽게 배우는 오라클 SQL과 PL/SQL 

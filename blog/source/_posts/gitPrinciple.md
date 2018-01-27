@@ -57,15 +57,15 @@ git을 효율적으로 사용하기 위해 활용할 수 있는 명령어가 굉
 ##### 1. Git bash 사용 전 선행 사항 및 사용할 로컬 Repository(폴더) 설정
 원격저장소와 연결하기 전에 개인 경험상 우선 SSH키를 생성해두는 편이 좋다. 나중에 SSH키를 통해서 야매?로 할 수 있는 일이 많아진다.
 
-우선 git bash를 연다. 아래 명령어를 입력한다. (git bash 상에선 ctr+v 대신 shift+ins로 붙여넣기 한다.)
+우선 git bash를 연다. 아래 명령어를 입력한다. (Git bash 상에선 ctr+v 대신 shift+ins로 붙여넣기 한다.)
 ```bash
-ls -al ~/.ssh 
+$ ls -al ~/.ssh 
 ```
 ![새로운 SSH키 생성1](/uploads/gitBashSSH.jpg) 
 위 명령어를 입력하고 위와같은 출력 값이 없다면, 새로 만들어야 한다. (ex. id_rsa.pub)
 키 생성을 위해 아래 명령어를 입력한다. email은 본인의 github 주소!
 ```bash
-ssh-keygen -t rsa -C "your_email@example.com"
+$ ssh-keygen -t rsa -C "your_email@example.com"
 ```
 아래와 같이 비밀번호를 입력하라는 창이 뜨면 입력해주면 끝~  
 ```bash
@@ -79,7 +79,7 @@ ssh-add ~/.ssh/id_rsa
 ```
 아래 명령어를 실행하여 키를 클립보드에 저장한다. ctrl + ins를 활용해서 복사해도 된다.
 ```bash
-clip < ~/.ssh//id_rsa.pub
+$ clip < ~/.ssh//id_rsa.pub
 ```
 위 단계까지 정상적으로 끝났다면, 자신의 github 홈페이지에 접속하여, Settings > SSH and GPG keys > New SSH key를 선택한다.
 ![새로운 SSH키 생성2](/uploads/githubSetting.jpg)  
@@ -90,14 +90,14 @@ clip < ~/.ssh//id_rsa.pub
 위에서 SSH키를 정상적으로 만들었다면, https와 ssh를 통해서 github에서 클론하거나 push할 수 있다. ~~두 개의 무기를 획득하였습니다.~~
 이제 실제로 git bash를 이용해서 내 저장소에 저장해보도록 한다.
 ```bash
-mkdir ~/Moon //로컬(내 컴퓨터)에서 사용할 폴더를 만든다.
-cd ~/Moon //폴더에 들어간다.
+$ mkdir ~/Moon //로컬(내 컴퓨터)에서 사용할 폴더를 만든다.
+$ cd ~/Moon //폴더에 들어간다.
 ```
 ```bash
-git init //깃 명령어를 사용할 수 있는 디렉토리로 만든다.
+$ git init //깃 명령어를 사용할 수 있는 디렉토리로 만든다.
 ```
 ```bash
-git status //현재 상태를 확인한다
+$ git status //현재 상태를 확인한다
 On branch master
 Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
@@ -107,31 +107,31 @@ Changes not staged for commit:
    modified:   12hours/package.json
 ```
 ```bash
-git status //현재 상태를 확인한다.
+$ git status //현재 상태를 확인한다.
 ```
 ```bash
-git add 화일명.확장자 //깃 주목 리스트에 특정 파일을 add할 수 있다.
-git add . //이 명령은 현재 파일의 모든 파일을 추가할 수 있다. (변화된 부분을 알아서 추가해준다.)
+$ git add 화일명.확장자 //깃 주목 리스트에 특정 파일을 add할 수 있다.
+$ git add . //이 명령은 현재 파일의 모든 파일을 추가할 수 있다. (변화된 부분을 알아서 추가해준다.)
 ```
 ```bash
-git commit -m “변경 사항등을 적는다.” //커밋해서 변경상황을 찍는다.
+$ git commit -m “변경 사항등을 적는다.” //커밋해서 변경상황을 찍는다.
 ```
 ```bash
-git remote add origin https://github.com/your_name/your_repo.git //로컬과 github 원격 저장소를 연결한다.
+$ git remote add origin https://github.com/your_name/your_repo.git //로컬과 github 원격 저장소를 연결한다.
 ```
 ```bash
-git remote -v //연결상태를 확인한다.(아래 처럼 나타나야 정상 작동!)
+$ git remote -v //연결상태를 확인한다.(아래 처럼 나타나야 정상 작동!)
 	origin  git@github.com:your_name/your_repo.git (fetch)
 	origin  git@github.com:your_name/your_repo.git (push)
 ```
 ```bash
-git remote rm origin //기존에 연결된 origin을 삭제할 수 있다.
+$ git remote rm origin //기존에 연결된 origin을 삭제할 수 있다.
 ```
 ```bash
-git remote set-url origin https://github.com/your_name/your_repo.git //연결된 url을 변경할 수 있다.
+$ git remote set-url origin https://github.com/your_name/your_repo.git //연결된 url을 변경할 수 있다.
 ```
 ```bash
-git push origin master //깃허브로 푸시한다. (실제 github 원격 저장소에 변경사항이 저장된다.)
+$ git push origin master //깃허브로 푸시한다. (실제 github 원격 저장소에 변경사항이 저장된다.)
 ```
 위 작업을 모두 마치고 github에 접속하면 변경사항이 저장된 것을 확인할 수 있다.
 ##### 3. Repository 확인
@@ -139,7 +139,11 @@ git push origin master //깃허브로 푸시한다. (실제 github 원격 저장
 
 위 그림에서 다운로드 버튼을 클릭한 후 url만 복사한 후, 내가 원하는 저장소에서 마우스 우클릭을 통해 git bash를 실행시킨다. clone 명령어를 이용하면 끝!
 ```bash
-git clone https://github.com/any_name/any_repo.git 
+$ git clone https://github.com/any_name/any_repo.git 
+```
+특정 브랜치(Branch)의 내용만 clone하고 싶을 땐, 아래 형식으로 특정 브랜치만 클론 가능하다. 브랜치에 대한 더 자세한 설명은 다음 포스팅에서 확인할 수 있다. 
+```bash
+$ git clone -b 브랜치명 --single-branch your_url
 ```
 
 위 동작처럼 bash를 활용하지 않고 수작업으로 비교적 간단하게 commit을 진행 할 수도 있다. ~~Geek스러움이 떨어지는 단점이있다.~~
