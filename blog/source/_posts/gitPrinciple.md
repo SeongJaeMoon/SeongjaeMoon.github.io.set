@@ -72,7 +72,7 @@ $ ssh-keygen -t rsa -C "your_email@example.com"
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 ```
-키를 만들었으니 에이전트에 추가해야한다. 자세한 설명은 [여기를 참고](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+키를 만들었으니 에이전트에 추가해야한다. 자세한 설명은 [여기](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)를 참고
 ```bash
 eval “$(ssh-agent -s)”
 ssh-add ~/.ssh/id_rsa

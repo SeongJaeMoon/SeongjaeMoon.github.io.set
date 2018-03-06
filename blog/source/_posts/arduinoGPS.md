@@ -10,7 +10,7 @@ tag:
 - 사물인터넷
 thumbnail: /uploads/arduinoKitSet.jpg
 ---
-아두이노는 오픈 소스를 지향하는 마이크로 컨트롤러(micro controller)를 내장한 기기 제어용 기판으로, 컴퓨터 메인보드의 단순 버전으로 이 기판에 다양한 센서나 부품 등의 장치를 연결할 수 있다. 컴퓨터와 연결해 소프트웨어를 로드하면 동작을 하게 되므로 제어용 전자 장치부터 로봇과 같은 것을 만들 수 있는 **'오픈소스 하드웨어'**라고 할 수 있다. 
+아두이노는 오픈 소스를 지향하는 마이크로 컨트롤러(micro controller)를 내장한 기기 제어용 기판으로, 컴퓨터 메인보드의 단순 버전으로 이 기판에 다양한 센서나 부품 등의 장치를 연결할 수 있다. 컴퓨터와 연결해 소프트웨어를 로드하면 동작을 하게 되므로 제어용 전자 장치부터 로봇과 같은 것을 만들 수 있는 **'오픈소스 하드웨어'**라고 할 수 있다.
 
 자유 소프트웨어 운동에서 출발한 오픈 소스라는 개념을 하드웨어 부문까지 확산시킨 것이라 할 수 있겠다. 많은 분야에 이미 아두이노 스케치용 코드가 제공되고 있으며, 개인적으로 다른 분야에 비하면 **꿀잼 영역**이라 할 수 있다. 아두이노에 GPS module을 연결하여 위성데이터를 수신 받고, 수신 받은 데이터를 통해 현재의 위치정보를 PC에 표시하는 것이 가능하다는 정보를 입수하여 **꿀잼 영역**에 도전 해보기로 했다.
 
@@ -20,10 +20,10 @@ thumbnail: /uploads/arduinoKitSet.jpg
 #### 활용 계획
 ##### 아두이노의 활용계획은 다음과 같다.
 ![활용계획](/uploads/arduinoPlan.jpg)
-##### 아두이노 활용계획을 세웠으므로, 아두이노가 필요하다! 
+##### 아두이노 활용계획을 세웠으므로, 아두이노가 필요하다!
 ![아두이노 키트](/uploads/arduinoKitSet.jpg)
 위 사진은 아두이노 우노 R3 키트와 GPS모듈 및 모듈을 연결하기 위한 여러 가지 회선과 PC와 연결할 수 있는 USB젠더가 들어있는 모습이다. 얄루:)  (용산 전자상가에서 구매하거나, 인터넷에서 손 쉽게 구매할 수 있다.)
-#### 스펙 
+#### 스펙
 아두이노 우노 R3 |GPS Module
 -------------------|----------------------------------
 마이크로 컨트롤러: ATmega328|동작 전압: 3.3v/5v
@@ -35,7 +35,7 @@ SRAM: 2KB|기타 특징: Ublock, NMEA 프로토콜 지원, 소비전력이 적�
 아날로그 입출력 핀: 6개|
 동작 전압: 5V|
 추천 입력 전압: 7V ~ 12V|
-위의 자료는 아두이노 우노R3와 GPS모듈의 기본적인 스펙이다. GPS모듈은 시리얼 통신으로 9600bps로 통신을 하는 것을 확인 할 수 있다. 
+위의 자료는 아두이노 우노R3와 GPS모듈의 기본적인 스펙이다. GPS모듈은 시리얼 통신으로 9600bps로 통신을 하는 것을 확인 할 수 있다.
 
 #### 아두이노 스케치 다운로드
 [아두이노 홈페이지](www.arduino.cc)에선 아두이노를 제어하기 위한 통합개발환경인 아두이노 스케치를 무료로 다운 받을 수 있도록 제공한다. 사용할 버전에 맞춰 다운로드를 하면 이로써 기본적인 준비는 완료된다.  
@@ -45,14 +45,14 @@ SRAM: 2KB|기타 특징: Ublock, NMEA 프로토콜 지원, 소비전력이 적�
 ![납땜납땜!](/uploads/arduinoGPS.jpg)
 
 납땜이 완료되면, 아두이노와 GPS모듈의 연결 해야한다. 아래 그림처럼 각각의 배선을  연결하면 된다.
-##### (좌) GPS 모듈, (우) 아두이노 
+##### (좌) GPS 모듈, (우) 아두이노
 - VCC -> 5v
 - GND -> GND
 - RX -> 3번 PIN
 - TX -> 2번 PIN
 ![아두이노 모듈](/uploads/arduinoGPSmodule.jpg)
 
-#### GPS 위성데이터 수신 
+#### GPS 위성데이터 수신
 이제 모든 준비가 끝났으니, 실제 데이터를 수신받도록 한다. 위성데이터는 여러가지 데이터를 포함하지만, 여기선 NMEA0183 라고 하는 프로토콜 규약에 의해서 수신 받은 데이터를 표시하게 된다. 내가 수신 받을 데이터에 대한 기본적인 정보는 알고 넘어가는게 좋을테니, NMEA0183 프로토콜에 대해 간단하게 알아보도록 하자.
 
 NMEA0183란 시간, 위치, 방위 등의 정보를 전송하기 위한 규격이다. NMEA0183은 미국의 **The National Marine Electronics Association**에서 정의해 놓았다. **이 데이터들은 주로 자이로컴퍼스, GPS, 나침반, 관성항법장치(INS)에 사용된다.** NMEA0183은 ASCII와 직렬 방식의 통신을 사용한다.  
@@ -62,7 +62,7 @@ NMEA0183란 시간, 위치, 방위 등의 정보를 전송하기 위한 규격�
 그렇다.. 뭐가 굉장히 복잡하다.. 일단은 저러한 패턴으로 데이터를 수신 받는다는 정도로만 알고 있으면 될성싶다. 아래 그림은 야외 나들이 기분을 살리며, 나의 보물 1호 삼성 랩탑과 ~~삼성 광고 아니다~~ 아두이노를 연결하여 GPS 데이터를 수신 받기 위해 준비 중인 모습이다.
 ![나들이갈까-볼빨간 사춘기](/uploads/arduinoSetGPS.jpg)
 
-이제 아두이노 소스를 살펴 볼 차례이다. 아두이노는 아두이노 스케치를 통해 코드를 업로드하고나면, loop 작업을 전원이 공급되는 동안 무한히 반복한다고 할 수 있다. 
+이제 아두이노 소스를 살펴 볼 차례이다. 아두이노는 아두이노 스케치를 통해 코드를 업로드하고나면, loop 작업을 전원이 공급되는 동안 무한히 반복한다고 할 수 있다.
 ```c
 #include <SoftwareSerial.h>
 SoftwareSerial GPS(2,3);
@@ -93,7 +93,7 @@ void loop(){
 //이 값을 GPS의 보오율과 동일하게 설정(9600)
 #define GPSBAUD 9600
  
-// TinyGPS 객체의 인스턴스를 생성
+// TinyGPS 객체의 인스턴스를 생성 -> TinyGPS 라이브러리 패키지를 다운로드 받아야 함!
 TinyGPS GPS;
 // 위에서 정의한 핀으로 NewSoftSerial 라이브러리를 초기화한다.
 SoftwareSerial uart_gps (RXPIN, TXPIN);
@@ -102,8 +102,8 @@ SoftwareSerial uart_gps (RXPIN, TXPIN);
 // TinyGPS 라이브러리를 사용
 void getgps (TinyGPS & gps);
  
-// setup 함수에서 두 개의 직렬 포트를 초기화해야합니다. 그만큼
-// 표준 하드웨어 직렬 포트 (Serial ())를 사용하여
+// setup 함수에서 두 개의 직렬 포트를 초기화
+// 표준 하드웨어 직렬 포트 (Serial ())를 사용하여 수신.
 void setup ()
 {
   Serial.begin (9600);
@@ -140,9 +140,9 @@ void getgps (TinyGPS & gps)
   // 함수 호출
   gps.f_get_position (&latitude, &longitude);
   //경위도 출력 가능
-  Serial.print("Lat/Long: "); 
-  Serial.print(latitude,5); 
-  Serial.print(", "); 
+  Serial.print("Lat/Long: ");
+  Serial.print(latitude,5);
+  Serial.print(", ");
   Serial.println(longitude,5);
   
   // 날짜와 시간은 같음
@@ -151,14 +151,14 @@ void getgps (TinyGPS & gps)
   byte month, day, hour, minute, second, hundredths;
   gps.crack_datetime(&year,&month,&day,&hour,&minute,&second,&hundredths);
   // 데이터 및 시간 출력
-  Serial.print("Date: "); Serial.print(month, DEC); Serial.print("/"); 
+  Serial.print("Date: "); Serial.print(month, DEC); Serial.print("/");
   Serial.print(day, DEC); Serial.print("/"); Serial.print(year);
-  Serial.print("  Time: "); Serial.print(hour, DEC); Serial.print(":"); 
-  Serial.print(minute, DEC); Serial.print(":"); Serial.print(second, DEC); 
+  Serial.print("  Time: "); Serial.print(hour, DEC); Serial.print(":");
+  Serial.print(minute, DEC); Serial.print(":"); Serial.print(second, DEC);
   Serial.print("."); Serial.println(hundredths, DEC);
 
 //고도와 코스 값을 직접 출력
-  Serial.print("Altitude (meters): "); Serial.println(gps.f_altitude());  Serial.print("Course (degrees): "); Serial.println(gps.f_course()); 
+  Serial.print("Altitude (meters): "); Serial.println(gps.f_altitude());  Serial.print("Course (degrees): "); Serial.println(gps.f_course());
   Serial.print("Speed(kmph): "); Serial.println(gps.f_speed_kmph());
   Serial.println ();
   
@@ -171,14 +171,14 @@ void getgps (TinyGPS & gps)
 ```
 이렇게 코드를 작성하고 나면,  시리얼 모니터에서 비교적 보기 좋게 나오는 것을 확인 할 수 있다! 이제 이 값을 가지고 구글어스에 뿌려보도록 하자.
 ![노트패드](/uploads/arduinoSerialM2.jpg)
-우선 구글 어스에서 내 gps 로그를 보기위해선, 당연히 [구글어스](https://www.google.co.kr/intl/ko/earth/download/gep/agree.html)가 설치 되어 있어야 한다. 또한, 시리얼 모니터에서 본 GPS로그 데이터를 .gpx형식으로 변환해주는 작업이 필요하다. (gpx 포멧에 대한 더 자세한 설명은 [여기를 참고](https://en.wikipedia.org/wiki/GPS_Exchange_Format)) 이러한  .gpx형식의 데이터는 xml형식으로 되어있기 때문에 xml형식으로 Notepad++이 매크로 기능을 이용해 적절하게 형식을 맞춰 바꿔주면 끝! 
+우선 구글 어스에서 내 gps 로그를 보기위해선, 당연히 [구글어스](https://www.google.co.kr/intl/ko/earth/download/gep/agree.html)가 설치 되어 있어야 한다. 또한, 시리얼 모니터에서 본 GPS로그 데이터를 .gpx형식으로 변환해주는 작업이 필요하다. (gpx 포멧에 대한 더 자세한 설명은 [여기를 참고](https://en.wikipedia.org/wiki/GPS_Exchange_Format)) 이러한  .gpx형식의 데이터는 xml형식으로 되어있기 때문에 xml형식으로 Notepad++의 매크로 기능을 이용해 적절하게 형식을 맞춰 바꿔주면 끝!
 
 구글어스 프로그램을 실행하고, 파일> 열기 > Gps > 내 gpx 파일 선택을 하면 된다.
 ![구글어스 보기](/uploads/arduinoGoogleEarth.jpg)
 
 아주 잘 나온다! 얄루 :)
 
-간단하게? 아두이노를 이용한 GPS 측정 테스트를 해볼 수 있었다. 개개인은 수신 받는 데이터가 원시 데이터가 아닌 가공 및 처리된 데이터를 이용하게 되므로 그 자체로만 판단하게 되지만, **원시 데이터를 사용자가 원하는 수준으로 편리하게 이용할 수 있도록 변환하는 것에는 굉장히 많은 작업과 시간이 소요됨을 배울 수 있었다.** 
+간단하게? 아두이노를 이용한 GPS 측정 테스트를 해볼 수 있었다. 개개인은 수신 받는 데이터가 원시 데이터가 아닌 가공 및 처리된 데이터를 이용하게 되므로 그 자체로만 판단하게 되지만, **원시 데이터를 사용자가 원하는 수준으로 편리하게 이용할 수 있도록 변환하는 것에는 굉장히 많은 작업과 시간이 소요됨을 배울 수 있었다.**
 
 꿀잼 영역이라 생각했지만.. 역시 피곤하다.. 다음은 아침마다 일어나지 못해 고생하는 나를 위해 알람시계를 만들어 보는걸로~
 
