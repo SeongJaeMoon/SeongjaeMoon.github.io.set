@@ -18,7 +18,7 @@ thumbnail: /uploads/algorithm/tsp.png
 
 책에서는 C++를 이용해서 코딩하지만, 스터디를 위해 사용하기로 한 언어가 JAVA이기 때문에 코드는 JAVA로 작성되었으며, 책의 내용을 나름대로 재구성하여 작성하였다.
 
-### 먼저, 여행하는 외판원 문제(TSP)에 대해서 알아 보자.
+### 먼저, 여행하는 외판원 문제(TSP)에 대해서 알아보자.
 우선, 여행하는 외판원 문제는 최적화 문제이다. 최적화 문제란 앞서 살펴 봤던, [게임판 덮기](https://seongjaemoon.github.io/2018/02/18/algorithmBoardCover/)나 [소풍](https://seongjaemoon.github.io/2018/02/09/algorithmPicnic/)같은 문제와는 달리 문제의 답이 하나가 아니라 여러 개이고, 그 중에서 어떤 기준에 따라 가장 **'좋은'** 답을 찾아 내는 문제이다. 문제의 이름에서 느껴지듯, 여행과 관련된 경로 계산 문제라는 것을 억지스럽게? 추측해볼 수 있다.
 
 ### 예를 들어보자.
@@ -58,7 +58,7 @@ public class TSP {
 		List<Integer>path = new ArrayList<Integer>();
 		//이미 들린 도시인지 확인하기 위한 배열 선언.
 		boolean visited [] = new boolean[n];
-		//첫번 째 도시를 시작점으로 한다.
+		//첫 번째 도시를 시작점으로 한다.
 		visited[0] = true;
 		path.add(0);
 		//각 도시간 경로의 길이를 표시.
@@ -86,7 +86,7 @@ public class TSP {
 			if(visited[next])continue;
 			//path가 결정된 크기를 할당.
 			int here = path.size() - 1;
-			//경로에 인덱스를 할당
+			//경로에 인덱스를 할당.
 			path.add(next);
 			//방문 했음을 표시.
 			visited[next] = true;
@@ -96,7 +96,7 @@ public class TSP {
 			ret = Math.min(ret, cand);
 			//다음 재귀호출시 방문할 경우의 수 계산을 위해 false 할당.
 			visited[next] = false;
-			//마지막 원소값 삭제.
+			//마지막 원소의 값 삭제.
 			path.remove(here);
 		}
 		return ret;

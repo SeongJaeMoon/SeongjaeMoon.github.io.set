@@ -15,16 +15,16 @@ thumbnail: /uploads/Together/ymymbottle.jpeg
 
 간만에 블로그 포스팅~ 최근 특별할 것 없던 나에게 정말 특별한 존재가 생겨 하루 하루가 행복함으로 가득하다. 강남에서 수원 그리고 정자를 오가며 보내는 이 시간이 너무 행복하다.
 
-그간의 시간을 남겨두기 위해 사진을 투척해 보자~ (사진이 돌아가는 건 고개를 살짝 돌려서 보면 되지 않을까..?)
+그간의 시간을 남겨두기 위해 사진을 투척해보자~ (사진이 돌아가는 건 고개를 살짝 돌려서 보면 되지 않을까..?)
 ### 야몽야몽
 ![썸네일에 나와있는 사진이다. 역시 사진을 못 찍는 나와는 다르게 갬성 사진을 찍을 줄 안다.](/uploads/Together/ymymbottle.jpeg)
-![아주 맛있어 보이는 피자이다. 근데 진짜 맛있다.](/uploads/Together/ymym3.jpeg)
+![아주 맛있어 보이는 피자다. 근데 진짜 맛있다.](/uploads/Together/ymym3.jpeg)
 ![내 손이 분주해 보인다.](/uploads/Together/ymym1.jpeg)
 ### 곱창고
 ![사진을 많이 못 찍어서 아쉽다.](/uploads/Together/gobchang.jpeg)
 ![처음에 밥 안 먹는다고 해놓고 맛나 보이니까 먹어버리기~](/uploads/Together/gobchang2.jpeg)
 ### 비어웍스
-![여기선 사진을 많이 못 찍었다. 둘 다 배불러서 감튀는 많이 못 먹었지만 맥주 3잔씩 먹어버리기~](/uploads/Together/beerworks.jpeg)
+![여기선 사진을 많이 못 찍었다. 둘 다 배불러서 감튀는 많이 못 먹었지만 맥주 세 잔씩 먹어버리기~](/uploads/Together/beerworks.jpeg)
 ### 한신포차
 ![매운 거 잘 못 먹는 둘.. 죽전역 한신포차는 생각보다 많이 안 매워서 잘 먹었다. 사진은 회생불가..](/uploads/Together/hanshin.jpeg)
 ### 코이라멘

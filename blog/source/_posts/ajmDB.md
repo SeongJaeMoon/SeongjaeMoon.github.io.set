@@ -86,6 +86,10 @@ gradle 파일에 라이브러리를 추가하고 Sync project가 정상적으로
 
 JXL 라이브러리는 쉽게 말해 엑셀 파일로 저장된 파일을 자바 코드로 한 줄 한 줄 읽어 올 수 있게 해주는 라이브러리이다. 단, 엑셀 2003 이하 버전(xls)으로 저장된 파일만 JXL로 핸들링이 가능하다. (JXL 라이브러리에 대한 더 자세한 설명은 [여기](http://www.nextree.co.kr/p5229/)를 참고.) jxl.jar 파일을 다운로드 받고, app > libs 폴더 밑에 넣어준다.
 
+다운로드를 받고 build.gradle에 아래와 같이 의존성을 추가한다.
+```java
+compile files('libs/jxl.jar')
+```
 ![엑셀로 저장된 파일](/uploads/ajm/excelDB.png)
 엑셀 데이터는 앞서 Q-GIS를 통해 통합된 데이터의 위치 정보와 속성 정보를 위와 같이 각각 다른 컬럼으로 구성한다. 이렇게 구성된 파일은 src > main > assets 폴더 밑에 넣어준다. 준비가 끝났으니, 안스 자바 코드를 살펴보자.
 
@@ -232,7 +236,7 @@ private void getFirebaseList(){
 ![location](/uploads/ajm/firebaseDB1.png)![geofire](/uploads/ajm/firebaseDB0.png)
 파이어베이스 콘솔의 Database 탭을 들어가면 데이터가 저장된 모습을 육안으로 확인할 수 있다.
 
-위 사진에서 볼 수 있듯이, location과 geofire의 자식이 똑같은 geohash 값을 갖는다. 지속적인 g:의 이 geohash 값의 비교를 통해서 location에 저장된 hash 값에 해당하는 위치에 사용자가 접근하면 음성 안내가 이루어지게 되는 것이다. 하지만, 위처럼 저장하면 값이 중복되어 저장되는 일이 벌어지는데, 이를 수정하는 구조를 생각해봐야겠다.
+위 사진에서 볼 수 있듯이, location과 geofire의 자식이 똑같은 geohash 값을 갖는다. 지속적인 g:의 geohash 값의 비교를 통해서 location에 저장된 hash 값에 해당하는 위치에 사용자가 접근하면 음성 안내가 이루어지게 되는 것이다. 하지만, 위처럼 저장하면 값이 중복되어 저장되는 일이 벌어지는데, 이를 수정하는 구조를 생각해봐야겠다.
 
 실제 테스트는 많은 디바이스에서 동시에 진행되지 않아 동시에 많은 트래픽이 필요로 하면 어떤 현상이 일어나는지는 알고 싶진 않지만.. 알아보도록 해야겠다.
 

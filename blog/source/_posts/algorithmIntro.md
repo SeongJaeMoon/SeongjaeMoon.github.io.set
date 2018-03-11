@@ -1,10 +1,14 @@
 ---
-layout: '[draft]'
+layout: '[post]'
 title: 알고리즘 문제 해결 전략
 date: 2018-01-06 23:00:00
 categories: Algorithm
 tag:
 - python
+- Java
+- C++
+- 알고리즘
+- 알고리즘 문제 해결 전략
 - algorithm
 thumbnail: /uploads/book2.jpg
 ---
