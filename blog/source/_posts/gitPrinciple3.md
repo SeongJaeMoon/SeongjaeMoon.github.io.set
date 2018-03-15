@@ -10,7 +10,7 @@ tag:
 thumbnail: /uploads/github.jpg
 ---
 
-[전 포스팅](https://seongjaemoon.github.io/2017/12/01/gitPrinciple2/)에 이어서 Github과 관련해 정리 해보고자 한다. 역시 Git 너란 친구는 정리를 해도해도 끝이 없다..  저번엔  Github를 통한 협업 워크 플로우를 간단하게 알아보았다면, 이번 포스팅에선 포크한 원격 저장소의 중간 내용 변경 사항을 내 원격 저장소와 동기화 하는 작업에 대해 알아보고, 더불어 알아두면 유용할 git bash 명령어에 대해 정리하고자 한다.
+[전 포스팅](https://seongjaemoon.github.io/2017/12/29/gitPrinciple2/)에 이어서 Github과 관련해 정리 해보고자 한다. 역시 Git 너란 친구는 정리를 해도해도 끝이 없다..  저번엔  Github를 통한 협업 워크 플로우를 간단하게 알아보았다면, 이번 포스팅에선 포크한 원격 저장소의 중간 내용 변경 사항을 내 원격 저장소와 동기화 하는 작업에 대해 알아보고, 더불어 알아두면 유용할 git bash 명령어에 대해 정리하고자 한다.
 
 ### 1. Fork 워크플로우
 도서 관리 프로그램 개발 협업을 위해 사용했던 워크 플로우에 대해 간단하게 정리해보면,  
@@ -122,7 +122,7 @@ To github.com:SeongJaeMoon/bookmng.git
    231efcf..96b9194  master -> master
 ```
 
-이후 작업은 [전 포스팅](https://seongjaemoon.github.io/2017/12/01/gitPrinciple2/)에서 본 것 처럼, 열심히 개발하고 풀 리퀘스트 하는 일이다 ㅎㅎ
+이후 작업은 [전 포스팅](https://seongjaemoon.github.io/2017/12/29/gitPrinciple2/)에서 본 것 처럼, 열심히 개발하고 풀 리퀘스트 하는 일이다 ㅎㅎ
 
 ### 알아두면 좋을 git 명령어
 

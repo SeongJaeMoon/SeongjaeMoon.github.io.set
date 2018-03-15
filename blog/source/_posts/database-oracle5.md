@@ -6,7 +6,7 @@ categories: Database
 tag:
 - Oracle
 - Database
-- VIEW
+- View
 - Query
 thumbnail: /uploads/Oracle.jpg
 ---
