@@ -11,7 +11,7 @@ tag:
 thumbnail: /uploads/Oracle.jpg
 ---
 
-[저번](https://seongjaemoon.github.io/2018/01/09/database-oracle1/) 포스팅에서 오라클 DB의 내장 함수에 대해 간단하게 알아보았다. 하지만, 오라클에선 더 많은 내장 함수를 제공한다. 아직 갈 길이 멀다는 것을 알 수 있다...
+[저번 포스팅](https://seongjaemoon.github.io/2018/01/09/database-oracle1/)에서 오라클 DB의 내장 함수에 대해 간단하게 알아보았다. 하지만, 오라클에선 더 많은 내장 함수를 제공한다. 아직 갈 길이 멀다는 것을 알 수 있다...
 
 이번 포스팅에선 오라클에서 제공하는 분석함수와 서브 쿼리에 대해 정리해보자.
 

@@ -109,8 +109,8 @@ SquareMatrix identity(int n);
 SquareMatrix pow(final SquareMatrix A, int m){
   //기저 사례 A^0 = 1
   if(m == 0) return identity(A.size());
-  if(m % 2 > 0) return pow(A, m - 1) * A;
-  SquareMatrix half = pow(A, m / 2);
+  if(m % 2 > 0) return Math.pow(A, m - 1) * A;
+  SquareMatrix half = Math.pow(A, m / 2);
   //A^m = (A^(n/2) * A^(n/2))
   return half * half;
 }
