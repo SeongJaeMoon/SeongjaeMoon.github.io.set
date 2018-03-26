@@ -1,2 +1,2 @@
 # SeongjaeMoon.github.io
-for Hexo
+for jekyll
